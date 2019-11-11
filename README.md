@@ -1,7 +1,7 @@
 # weAR_videoTest
 Atempt in doing a simple video display using a target with ARjs + Aframe + Unity
 
-## Tech
+## Stack
 - [ARjs: to create a web-based AR experience that is non-dependant on installs and work accross platforms](https://github.com/jeromeetienne/AR.js)
 - [Aframe: to support web-rendered 3D objects + materials for the video display](https://aframe.io/)
 - [Unity: to be able to create a 3D scene and compile it natively](https://github.com/taylordigital13/ARjs_Unity)
