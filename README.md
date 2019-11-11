@@ -20,10 +20,10 @@ unityAR.js/ Assets/ AR.js-master/ aframe/ Videotest/
 - Example with Hiro marker runs perfect on Firefox
 - unable to run a https local python server (required to try on mobile)
 - Safari errors log:
-Viewport argument key "minimal-ui" not recognized and ignored
-Unhandled Promise Rejection: [object Event]
-WebGL: INVALID_VALUE: textImage2D: no video
-Unhandled Promise Rejection: NotSupportedError: The operation is not supported
+/ Viewport argument key "minimal-ui" not recognized and ignored
+/ Unhandled Promise Rejection: [object Event]
+/ WebGL: INVALID_VALUE: textImage2D: no video
+/ Unhandled Promise Rejection: NotSupportedError: The operation is not supported
 
 ## Possible solutions
 - [Debug webview] https://github.com/jeromeetienne/AR.js/issues/472
