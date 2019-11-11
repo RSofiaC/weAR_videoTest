@@ -11,7 +11,7 @@ Atempt in doing a simple video display using a target with ARjs + Aframe + Unity
 https://www.youtube.com/watch?v=_WnyC2ZrDls
 
 ## Current version (11/11/19)
-- Run local server for main folder
+- Run local server for Videotest
 ```bash 
 unityAR.js/ Assets/ AR.js-master/ aframe/ Videotest/ 
 ```
