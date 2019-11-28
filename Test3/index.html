@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> <!-- ¿Qué es esto? -->
 	<title>Clase Azul Montage</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
@@ -12,12 +12,19 @@
 	<script src="threex/threex-artoolkitcontext.js"></script>
 	<script src="threex/threex-arbasecontrols.js"></script>
 	<script src="threex/threex-armarkercontrols.js"></script>
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<video id="video" autoplay="false" loop crossorigin="anonymous" controls muted width="640px" height="480px" style="visibility:hidden">
-	<source src="videos/cuevaAmbar.mov" type='video/mp4';>
+<video id="video" src="videos/cuevaAmbar.mov"
+				controls muted
+				autoplay= "true"
+				loop
+				height="270" width="480"
+				style.visibility="hidden">
 </video>
 
 
@@ -29,6 +36,9 @@ Original: <video id="video" controls="true" autoplay loop playsinline width="640
 
 From XR: loaded="true" class="videoTexture" height="128" width="128" data-scene="0" data-mat="1" loop="" playsinline="">
 	<source src="videos/cuevaAmbar.mp4" type="video/mp4">
+
+From Unity compiled: id="video" autoplay="false" loop crossorigin="anonymous" controls muted width="640px" height="480px" style="visibility:hidden">
+	<source src="videos/cuevaAmbar.mov" type='video/mp4';>
 
 	Example created by Lee Stemkoski: https://github.com/stemkoski
   Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
@@ -80,13 +90,13 @@ function initialize()
 		sourceType : 'webcam',
 	});
 
-	function onResize()
+	function onResize()  //Necesito esto?
 	{
-		arToolkitSource.onResize()
-		arToolkitSource.copySizeTo(renderer.domElement)
+		arToolkitSource.onResizeElement()
+		arToolkitSource.copyElementSizeTo(renderer.domElement)
 		if ( arToolkitContext.arController !== null )
 		{
-			arToolkitSource.copySizeTo(arToolkitContext.arController.canvas)
+			arToolkitSource.copyElementSizeTo(arToolkitContext.arController.canvas)
 		}
 	}
 
@@ -125,7 +135,7 @@ function initialize()
 		type: 'pattern', patternUrl: "pattern-corazonMontage.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(2,2, 4,4);
+	let geometry1 = new THREE.PlaneBufferGeometry(3,2, 4,4);
 
 	let video = document.getElementById( 'video' );
 	let texture = new THREE.VideoTexture( video );
